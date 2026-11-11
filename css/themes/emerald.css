@@ -1,0 +1,79 @@
+/* ============================================
+   SchoolOS Theme — Heritage Emerald (Default)
+   Dark sidebar + emerald accents
+   ============================================ */
+
+[data-theme="emerald"],
+:root {
+  /* Primary */
+  --sos-primary:        var(--sos-emerald-600);
+  --sos-primary-hover:  var(--sos-emerald-700);
+  --sos-primary-light:  var(--sos-emerald-50);
+
+  /* Surfaces */
+  --sos-surface:        var(--sos-neutral-0);
+  --sos-surface-alt:    var(--sos-neutral-50);
+  --sos-border:         var(--sos-neutral-200);
+
+  /* Text */
+  --sos-text:           var(--sos-neutral-900);
+  --sos-text-muted:     var(--sos-neutral-500);
+
+  /* Sidebar — dark emerald */
+  --sos-sidebar-bg:     var(--sos-emerald-950);
+  --sos-sidebar-text:   rgba(255, 255, 255, 0.85);
+  --sos-sidebar-active: var(--sos-emerald-600);
+  --sos-sidebar-hover:  rgba(255, 255, 255, 0.08);
+  --sos-sidebar-border: rgba(255, 255, 255, 0.1);
+
+  /* Header */
+  --sos-header-bg:      var(--sos-neutral-0);
+  --sos-header-border:  var(--sos-neutral-200);
+
+  /* Selection */
+  --sos-selection-bg:   var(--sos-emerald-200);
+  --sos-selection-text: var(--sos-emerald-900);
+}
+
+/* ── Sidebar Overrides ── */
+[data-theme="emerald"] .sos-sidebar {
+  background: var(--sos-sidebar-bg);
+  color: var(--sos-sidebar-text);
+}
+
+[data-theme="emerald"] .sos-sidebar__header {
+  border-bottom-color: var(--sos-sidebar-border);
+}
+
+[data-theme="emerald"] .sos-sidebar__link {
+  color: var(--sos-sidebar-text);
+}
+
+[data-theme="emerald"] .sos-sidebar__link:hover {
+  background: var(--sos-sidebar-hover);
+  color: #ffffff;
+}
+
+[data-theme="emerald"] .sos-sidebar__link.active {
+  background: var(--sos-sidebar-active);
+  color: #ffffff;
+}
+
+[data-theme="emerald"] .sos-sidebar__footer {
+  border-top-color: var(--sos-sidebar-border);
+}
+
+/* ── Accent Highlights ── */
+[data-theme="emerald"] .sos-accent-bar {
+  border-left: 3px solid var(--sos-primary);
+  padding-left: var(--sos-space-4);
+}
+
+[data-theme="emerald"] .sos-card--accent {
+  border-top: 3px solid var(--sos-primary);
+}
+
+[data-theme="emerald"] ::selection {
+  background-color: var(--sos-selection-bg);
+  color: var(--sos-selection-text);
+}

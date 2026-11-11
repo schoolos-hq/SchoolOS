@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoolOS — Design System Preview</title>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/themes/emerald.css">
+  <link rel="stylesheet" href="css/themes/light.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
+  </script>
+</head>
+<body>
+  <div class="sos-app">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sos-sidebar" id="sidebar">
+      <div class="sos-sidebar__header">
+        <div class="sos-sidebar__logo">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="8" fill="#059669"/>
+            <path d="M10 18 L14 26 L26 10" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="sos-sidebar__brand">SchoolOS</span>
+      </div>
+
+      <nav class="sos-sidebar__nav">
+        <a href="#" class="sos-sidebar__link active">
+          <span class="sos-sidebar__link-icon"><i data-lucide="layout-dashboard" width="20" height="20"></i></span>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="sos-sidebar__link">
+          <span class="sos-sidebar__link-icon"><i data-lucide="users" width="20" height="20"></i></span>
+          <span>Students</span>
+        </a>
+        <a href="#" class="sos-sidebar__link">
+          <span class="sos-sidebar__link-icon"><i data-lucide="graduation-cap" width="20" height="20"></i></span>
+          <span>Teachers</span>
+        </a>
+        <a href="#" class="sos-sidebar__link">
+          <span class="sos-sidebar__link-icon"><i data-lucide="book-open" width="20" height="20"></i></span>
+          <span>Classes</span>
+        </a>
+        <a href="#" class="sos-sidebar__link">
+          <span class="sos-sidebar__link-icon"><i data-lucide="calendar" width="20" height="20"></i></span>
+          <span>Schedule</span>
+        </a>
+        <a href="#" class="sos-sidebar__link">
+          <span class="sos-sidebar__link-icon"><i data-lucide="file-text" width="20" height="20"></i></span>
+          <span>Exams</span>
+        </a>
+        <a href="#" class="sos-sidebar__link">
+          <span class="sos-sidebar__link-icon"><i data-lucide="bar-chart-3" width="20" height="20"></i></span>
+          <span>Reports</span>
+        </a>
+        <a href="#" class="sos-sidebar__link">
+          <span class="sos-sidebar__link-icon"><i data-lucide="settings" width="20" height="20"></i></span>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sos-sidebar__footer">
+        <a href="#" class="sos-sidebar__link">
+          <span class="sos-sidebar__link-icon"><i data-lucide="log-out" width="20" height="20"></i></span>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ==================== MAIN ==================== -->
+    <main class="sos-main">
+
+      <!-- Header -->
+      <header class="sos-header">
+        <div class="sos-header__left">
+          <button class="sos-btn sos-btn--ghost sos-btn--icon" onclick="document.getElementById('sidebar').classList.toggle('collapsed')">
+            <i data-lucide="menu" width="20" height="20"></i>
+          </button>
+          <h1 class="sos-h4">Dashboard</h1>
+        </div>
+        <div class="sos-header__right">
+          <button class="sos-btn sos-btn--ghost sos-btn--icon" id="themeToggle" title="Toggle theme">
+            <i data-lucide="sun" width="20" height="20"></i>
+          </button>
+          <button class="sos-btn sos-btn--ghost sos-btn--icon">
+            <i data-lucide="bell" width="20" height="20"></i>
+          </button>
+          <div class="sos-avatar">AZ</div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="sos-content">
+
+        <!-- Stat Cards -->
+        <section class="sos-grid sos-grid-4 sos-mb-6">
+          <div class="sos-card sos-hover-lift sos-animate-fade-in-up sos-delay-1">
+            <div class="sos-stat">
+              <span class="sos-stat__label">Total Students</span>
+              <span class="sos-stat__value">1,247</span>
+              <span class="sos-stat__change sos-stat__change--up">↑ 12% from last month</span>
+            </div>
+          </div>
+          <div class="sos-card sos-hover-lift sos-animate-fade-in-up sos-delay-2">
+            <div class="sos-stat">
+              <span class="sos-stat__label">Active Teachers</span>
+              <span class="sos-stat__value">84</span>
+              <span class="sos-stat__change sos-stat__change--up">↑ 3 new this term</span>
+            </div>
+          </div>
+          <div class="sos-card sos-hover-lift sos-animate-fade-in-up sos-delay-3">
+            <div class="sos-stat">
+              <span class="sos-stat__label">Attendance Today</span>
+              <span class="sos-stat__value">94.2%</span>
+              <span class="sos-stat__change sos-stat__change--down">↓ 1.1% from yesterday</span>
+            </div>
+          </div>
+          <div class="sos-card sos-hover-lift sos-animate-fade-in-up sos-delay-4">
+            <div class="sos-stat">
+              <span class="sos-stat__label">Avg. Grade</span>
+              <span class="sos-stat__value">B+</span>
+              <span class="sos-stat__change sos-stat__change--up">↑ 0.3 points</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Two Column -->
+        <div class="sos-grid sos-grid-2 sos-mb-6">
+
+          <!-- Recent Students Card -->
+          <div class="sos-card sos-animate-fade-in-up sos-delay-5">
+            <div class="sos-card__header">
+              <span class="sos-card__title">Recent Students</span>
+              <button class="sos-btn sos-btn--ghost sos-btn--sm">View All</button>
+            </div>
+            <div class="sos-card__body">
+              <div class="sos-table-wrap">
+                <table class="sos-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Class</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sos-flex sos-items-center sos-gap-2">
+                        <div class="sos-avatar sos-avatar--sm">AN</div>
+                        Ahmad Nabil
+                      </td>
+                      <td>5 Arif</td>
+                      <td><span class="sos-badge sos-badge--success">Active</span></td>
+                    </tr>
+                    <tr>
+                      <td class="sos-flex sos-items-center sos-gap-2">
+                        <div class="sos-avatar sos-avatar--sm">SA</div>
+                        Siti Aisyah
+                      </td>
+                      <td>4 Bestari</td>
+                      <td><span class="sos-badge sos-badge--success">Active</span></td>
+                    </tr>
+                    <tr>
+                      <td class="sos-flex sos-items-center sos-gap-2">
+                        <div class="sos-avatar sos-avatar--sm">MR</div>
+                        Muhammad Rafi
+                      </td>
+                      <td>6 Cemerlang</td>
+                      <td><span class="sos-badge sos-badge--warning">Absent</span></td>
+                    </tr>
+                    <tr>
+                      <td class="sos-flex sos-items-center sos-gap-2">
+                        <div class="sos-avatar sos-avatar--sm">NI</div>
+                        Nur Izzati
+                      </td>
+                      <td>5 Arif</td>
+                      <td><span class="sos-badge sos-badge--success">Active</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions Card -->
+          <div class="sos-card sos-animate-fade-in-up sos-delay-6">
+            <div class="sos-card__header">
+              <span class="sos-card__title">Quick Actions</span>
+            </div>
+            <div class="sos-card__body sos-flex-col sos-gap-3">
+              <button class="sos-btn sos-btn--primary sos-w-full">
+                <i data-lucide="user-plus" width="16" height="16"></i>
+                Add New Student
+              </button>
+              <button class="sos-btn sos-btn--secondary sos-w-full">
+                <i data-lucide="clipboard-list" width="16" height="16"></i>
+                Take Attendance
+              </button>
+              <button class="sos-btn sos-btn--secondary sos-w-full">
+                <i data-lucide="file-plus" width="16" height="16"></i>
+                Create Exam
+              </button>
+              <button class="sos-btn sos-btn--secondary sos-w-full">
+                <i data-lucide="send" width="16" height="16"></i>
+                Send Announcement
+              </button>
+
+              <hr class="sos-divider">
+
+              <!-- Sample form fields -->
+              <div>
+                <label class="sos-label">Search Student</label>
+                <input type="text" class="sos-input" placeholder="Enter name or ID...">
+              </div>
+              <div>
+                <label class="sos-label">Filter by Class</label>
+                <select class="sos-select">
+                  <option>All Classes</option>
+                  <option>5 Arif</option>
+                  <option>4 Bestari</option>
+                  <option>6 Cemerlang</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges Showcase -->
+        <div class="sos-card sos-mb-6 sos-animate-fade-in-up sos-delay-7">
+          <div class="sos-card__header">
+            <span class="sos-card__title">Status Badges</span>
+          </div>
+          <div class="sos-card__body sos-flex sos-flex-wrap sos-gap-3">
+            <span class="sos-badge sos-badge--default">Default</span>
+            <span class="sos-badge sos-badge--primary">Primary</span>
+            <span class="sos-badge sos-badge--success">Active</span>
+            <span class="sos-badge sos-badge--warning">Pending</span>
+            <span class="sos-badge sos-badge--error">Suspended</span>
+            <span class="sos-badge sos-badge--info">Info</span>
+          </div>
+        </div>
+
+        <!-- Typography & Buttons Showcase -->
+        <div class="sos-grid sos-grid-2 sos-mb-6">
+          <div class="sos-card sos-animate-fade-in-up sos-delay-8">
+            <div class="sos-card__header">
+              <span class="sos-card__title">Typography Scale</span>
+            </div>
+            <div class="sos-card__body sos-flex-col sos-gap-3">
+              <p class="sos-h1">Heading 1</p>
+              <p class="sos-h2">Heading 2</p>
+              <p class="sos-h3">Heading 3</p>
+              <p class="sos-h4">Heading 4</p>
+              <p class="sos-h5">Heading 5</p>
+              <p class="sos-h6">Heading 6</p>
+              <p class="sos-body">Body text — The quick brown fox jumps over the lazy dog.</p>
+              <p class="sos-body-sm">Small body text — secondary information and captions.</p>
+              <p class="sos-caption">Caption text</p>
+              <p class="sos-overline">Overline Text</p>
+              <code class="sos-code">inline code snippet</code>
+            </div>
+          </div>
+
+          <div class="sos-card sos-animate-fade-in-up sos-delay-8">
+            <div class="sos-card__header">
+              <span class="sos-card__title">Button Variants</span>
+            </div>
+            <div class="sos-card__body sos-flex-col sos-gap-3">
+              <div class="sos-flex sos-flex-wrap sos-gap-3">
+                <button class="sos-btn sos-btn--primary">Primary</button>
+                <button class="sos-btn sos-btn--secondary">Secondary</button>
+                <button class="sos-btn sos-btn--ghost">Ghost</button>
+                <button class="sos-btn sos-btn--danger">Danger</button>
+              </div>
+              <div class="sos-flex sos-flex-wrap sos-gap-3">
+                <button class="sos-btn sos-btn--primary sos-btn--sm">Small</button>
+                <button class="sos-btn sos-btn--primary">Default</button>
+                <button class="sos-btn sos-btn--primary sos-btn--lg">Large</button>
+              </div>
+              <div class="sos-flex sos-flex-wrap sos-gap-3">
+                <button class="sos-btn sos-btn--primary" disabled>Disabled</button>
+                <button class="sos-btn sos-btn--primary">
+                  <span class="sos-spinner sos-spinner--sm" style="border-top-color: white"></span>
+                  Loading...
+                </button>
+              </div>
+              <div class="sos-flex sos-flex-wrap sos-gap-3">
+                <div class="sos-avatar sos-avatar--sm">S</div>
+                <div class="sos-avatar">MD</div>
+                <div class="sos-avatar sos-avatar--lg">LG</div>
+                <div class="sos-avatar sos-avatar--xl">XL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loading States -->
+        <div class="sos-card sos-mb-6">
+          <div class="sos-card__header">
+            <span class="sos-card__title">Loading States</span>
+          </div>
+          <div class="sos-card__body sos-flex-col sos-gap-4">
+            <div class="sos-flex sos-items-center sos-gap-4">
+              <div class="sos-spinner sos-spinner--sm"></div>
+              <div class="sos-spinner"></div>
+              <div class="sos-spinner sos-spinner--lg"></div>
+            </div>
+            <div class="sos-flex-col sos-gap-3" style="max-width: 400px">
+              <div class="sos-skeleton sos-skeleton--title"></div>
+              <div class="sos-skeleton sos-skeleton--text"></div>
+              <div class="sos-skeleton sos-skeleton--text" style="width: 60%"></div>
+            </div>
+            <div>
+              <div class="sos-body-sm sos-mb-2">Upload Progress — 68%</div>
+              <div class="sos-progress">
+                <div class="sos-progress__bar" style="width: 68%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /sos-content -->
+    </main>
+  </div><!-- /sos-app -->
+
+  <!-- Theme Toggle Script -->
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'emerald' ? 'light' : 'emerald');
+    });
+  </script>
+</body>
+</html>

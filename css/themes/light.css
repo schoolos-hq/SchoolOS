@@ -1,0 +1,65 @@
+/* ============================================
+   SchoolOS Theme — Light
+   Clean white sidebar variant
+   ============================================ */
+
+[data-theme="light"] {
+  /* Primary — same emerald family */
+  --sos-primary:        var(--sos-emerald-600);
+  --sos-primary-hover:  var(--sos-emerald-700);
+  --sos-primary-light:  var(--sos-emerald-50);
+
+  /* Surfaces */
+  --sos-surface:        var(--sos-neutral-0);
+  --sos-surface-alt:    var(--sos-neutral-50);
+  --sos-border:         var(--sos-neutral-200);
+
+  /* Text */
+  --sos-text:           var(--sos-neutral-900);
+  --sos-text-muted:     var(--sos-neutral-500);
+
+  /* Sidebar — light variant */
+  --sos-sidebar-bg:     var(--sos-neutral-0);
+  --sos-sidebar-text:   var(--sos-neutral-700);
+  --sos-sidebar-active: var(--sos-emerald-50);
+  --sos-sidebar-hover:  var(--sos-neutral-100);
+  --sos-sidebar-border: var(--sos-neutral-200);
+}
+
+/* ── Sidebar Overrides ── */
+[data-theme="light"] .sos-sidebar {
+  background: var(--sos-sidebar-bg);
+  color: var(--sos-sidebar-text);
+  border-right: 1px solid var(--sos-sidebar-border);
+}
+
+[data-theme="light"] .sos-sidebar__header {
+  border-bottom-color: var(--sos-sidebar-border);
+}
+
+[data-theme="light"] .sos-sidebar__brand {
+  color: var(--sos-text);
+}
+
+[data-theme="light"] .sos-sidebar__link {
+  color: var(--sos-sidebar-text);
+}
+
+[data-theme="light"] .sos-sidebar__link:hover {
+  background: var(--sos-sidebar-hover);
+  color: var(--sos-text);
+}
+
+[data-theme="light"] .sos-sidebar__link.active {
+  background: var(--sos-sidebar-active);
+  color: var(--sos-emerald-700);
+  font-weight: var(--sos-weight-semibold);
+}
+
+[data-theme="light"] .sos-sidebar__link.active .sos-sidebar__link-icon {
+  color: var(--sos-emerald-600);
+}
+
+[data-theme="light"] .sos-sidebar__footer {
+  border-top-color: var(--sos-sidebar-border);
+}

@@ -1,0 +1,210 @@
+/* ============================================
+   SchoolOS Animations
+   Keyframes, transitions, and motion utilities
+   ============================================ */
+
+/* ── Keyframes ── */
+@keyframes sos-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes sos-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sos-fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sos-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sos-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sos-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sos-slide-in-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes sos-slide-in-bottom {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes sos-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes sos-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes sos-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+@keyframes sos-bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-8px);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes sos-count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Animation Utilities ── */
+.sos-animate-fade-in       { animation: sos-fade-in var(--sos-duration-normal) var(--sos-ease-default) both; }
+.sos-animate-fade-in-up    { animation: sos-fade-in-up var(--sos-duration-normal) var(--sos-ease-out) both; }
+.sos-animate-fade-in-down  { animation: sos-fade-in-down var(--sos-duration-normal) var(--sos-ease-out) both; }
+.sos-animate-fade-in-left  { animation: sos-fade-in-left var(--sos-duration-normal) var(--sos-ease-out) both; }
+.sos-animate-fade-in-right { animation: sos-fade-in-right var(--sos-duration-normal) var(--sos-ease-out) both; }
+.sos-animate-scale-in      { animation: sos-scale-in var(--sos-duration-normal) var(--sos-ease-bounce) both; }
+.sos-animate-spin           { animation: sos-spin 1s linear infinite; }
+.sos-animate-pulse          { animation: sos-pulse 2s var(--sos-ease-default) infinite; }
+.sos-animate-bounce         { animation: sos-bounce 1s infinite; }
+
+/* ── Staggered Delays ── */
+.sos-delay-1 { animation-delay: 50ms; }
+.sos-delay-2 { animation-delay: 100ms; }
+.sos-delay-3 { animation-delay: 150ms; }
+.sos-delay-4 { animation-delay: 200ms; }
+.sos-delay-5 { animation-delay: 250ms; }
+.sos-delay-6 { animation-delay: 300ms; }
+.sos-delay-7 { animation-delay: 350ms; }
+.sos-delay-8 { animation-delay: 400ms; }
+
+/* ── Transition Utilities ── */
+.sos-transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: var(--sos-duration-normal);
+  transition-timing-function: var(--sos-ease-default);
+}
+
+.sos-transition-fast {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: var(--sos-duration-fast);
+  transition-timing-function: var(--sos-ease-default);
+}
+
+.sos-transition-slow {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: var(--sos-duration-slow);
+  transition-timing-function: var(--sos-ease-default);
+}
+
+.sos-transition-transform {
+  transition: transform var(--sos-duration-normal) var(--sos-ease-default);
+}
+
+.sos-transition-opacity {
+  transition: opacity var(--sos-duration-normal) var(--sos-ease-default);
+}
+
+/* ── Hover Micro-interactions ── */
+.sos-hover-lift {
+  transition: transform var(--sos-duration-fast) var(--sos-ease-default),
+              box-shadow var(--sos-duration-fast) var(--sos-ease-default);
+}
+
+.sos-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sos-shadow-lg);
+}
+
+.sos-hover-grow {
+  transition: transform var(--sos-duration-fast) var(--sos-ease-default);
+}
+
+.sos-hover-grow:hover {
+  transform: scale(1.02);
+}
+
+.sos-hover-glow {
+  transition: box-shadow var(--sos-duration-fast) var(--sos-ease-default);
+}
+
+.sos-hover-glow:hover {
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+}
+
+/* ── Loading Spinner ── */
+.sos-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--sos-neutral-200);
+  border-top-color: var(--sos-primary);
+  border-radius: 50%;
+  animation: sos-spin 0.6s linear infinite;
+}
+
+.sos-spinner--sm { width: 16px; height: 16px; border-width: 2px; }
+.sos-spinner--lg { width: 32px; height: 32px; border-width: 3px; }
+
+/* ── Progress Bar ── */
+.sos-progress {
+  width: 100%;
+  height: 8px;
+  background: var(--sos-neutral-200);
+  border-radius: var(--sos-radius-full);
+  overflow: hidden;
+}
+
+.sos-progress__bar {
+  height: 100%;
+  background: var(--sos-primary);
+  border-radius: var(--sos-radius-full);
+  transition: width var(--sos-duration-slow) var(--sos-ease-default);
+}

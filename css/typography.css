@@ -1,0 +1,147 @@
+/* ============================================
+   SchoolOS Typography
+   Heading, body, and utility text styles
+   ============================================ */
+
+/* ── Google Fonts Import ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Headings ── */
+.sos-h1 {
+  font-size: var(--sos-text-3xl);
+  font-weight: var(--sos-weight-bold);
+  line-height: var(--sos-leading-tight);
+  color: var(--sos-text);
+  letter-spacing: -0.025em;
+}
+
+.sos-h2 {
+  font-size: var(--sos-text-2xl);
+  font-weight: var(--sos-weight-bold);
+  line-height: var(--sos-leading-tight);
+  color: var(--sos-text);
+  letter-spacing: -0.02em;
+}
+
+.sos-h3 {
+  font-size: var(--sos-text-xl);
+  font-weight: var(--sos-weight-semibold);
+  line-height: var(--sos-leading-tight);
+  color: var(--sos-text);
+}
+
+.sos-h4 {
+  font-size: var(--sos-text-lg);
+  font-weight: var(--sos-weight-semibold);
+  line-height: var(--sos-leading-tight);
+  color: var(--sos-text);
+}
+
+.sos-h5 {
+  font-size: var(--sos-text-md);
+  font-weight: var(--sos-weight-semibold);
+  line-height: var(--sos-leading-normal);
+  color: var(--sos-text);
+}
+
+.sos-h6 {
+  font-size: var(--sos-text-base);
+  font-weight: var(--sos-weight-semibold);
+  line-height: var(--sos-leading-normal);
+  color: var(--sos-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Body Text ── */
+.sos-body {
+  font-size: var(--sos-text-base);
+  font-weight: var(--sos-weight-normal);
+  line-height: var(--sos-leading-normal);
+  color: var(--sos-text);
+}
+
+.sos-body-sm {
+  font-size: var(--sos-text-sm);
+  font-weight: var(--sos-weight-normal);
+  line-height: var(--sos-leading-normal);
+  color: var(--sos-text-muted);
+}
+
+.sos-body-lg {
+  font-size: var(--sos-text-md);
+  font-weight: var(--sos-weight-normal);
+  line-height: var(--sos-leading-relaxed);
+  color: var(--sos-text);
+}
+
+/* ── Caption & Overline ── */
+.sos-caption {
+  font-size: var(--sos-text-xs);
+  font-weight: var(--sos-weight-normal);
+  line-height: var(--sos-leading-normal);
+  color: var(--sos-text-muted);
+}
+
+.sos-overline {
+  font-size: var(--sos-text-xs);
+  font-weight: var(--sos-weight-semibold);
+  line-height: var(--sos-leading-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sos-text-muted);
+}
+
+/* ── Code / Mono ── */
+.sos-code {
+  font-family: var(--sos-font-mono);
+  font-size: var(--sos-text-sm);
+  background: var(--sos-neutral-100);
+  padding: var(--sos-space-1) var(--sos-space-2);
+  border-radius: var(--sos-radius-sm);
+  color: var(--sos-emerald-700);
+}
+
+/* ── Links ── */
+.sos-link {
+  color: var(--sos-primary);
+  font-weight: var(--sos-weight-medium);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--sos-duration-fast) var(--sos-ease-default);
+}
+
+.sos-link:hover {
+  text-decoration-color: currentColor;
+}
+
+/* ── Text Utilities ── */
+.sos-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sos-text-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sos-text-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sos-text-center  { text-align: center; }
+.sos-text-left    { text-align: left; }
+.sos-text-right   { text-align: right; }
+.sos-text-muted   { color: var(--sos-text-muted); }
+.sos-text-primary { color: var(--sos-primary); }
+.sos-text-success { color: var(--sos-success); }
+.sos-text-warning { color: var(--sos-warning); }
+.sos-text-error   { color: var(--sos-error); }
